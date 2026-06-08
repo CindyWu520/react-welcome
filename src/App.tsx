@@ -12,7 +12,7 @@ import { SwitchStatement } from "./components/conditionalRenderingPatterns/Switc
 import { BasicArrayMapping } from "./components/renderLists/BasicArrayMapping";
 import { FilterList } from "./components/renderLists/FilterList";
 import { AddRemoveItems } from "./components/renderLists/AddRemoveItems";
-import { MultipleInput } from "./components/formInput/multipleInput";
+import { MultipleInput } from "./components/formInput/MultipleInput";
 import { FormSubmission } from "./components/formInput/FormSubmission";
 import { RadioAndCheckButton } from "./components/formInput/RadioAndCheckButton";
 

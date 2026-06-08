@@ -19,17 +19,19 @@ const styles = {
 // Example 2: Inline handler
 export const ButtonExample = () => {
   return (
-    <button
-      style={styles}
-      // Example 3: hanlder with event paramter
-      onClick={(event) => {
-        console.log("event: ", event);
-        console.log("target: ", event.target);
-        console.log("type: ", event.type);
-        alert("Button Clicked!");
-      }}
-    >
-      click me
-    </button>
+    <>
+      <button
+        style={styles}
+        // Example 3: hanlder with event paramter
+        onClick={(event) => {
+          console.log("event: ", event);
+          console.log("target: ", event.target);
+          console.log("type: ", event.type);
+          alert("Button Clicked!");
+        }}
+      >
+        click me
+      </button>
+    </>
   );
 };
