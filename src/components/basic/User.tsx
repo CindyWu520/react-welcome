@@ -3,7 +3,7 @@ type userProps = {
   role: "admin" | "user";
   verified: boolean;
 };
-export const User = ({ name, role, verified }: userProps) => {
+export const User = ({ name, role, verified }: userProps) => { // can use { prop }，deconstructure: {name, role, verified}
   const clickEvent = (name: string) => {
     alert(`hello, ${name}`);
   };

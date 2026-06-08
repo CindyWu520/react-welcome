@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <Card>
-        <ButtonExample></ButtonExample>
+        <ButtonExample />
         <Welcome name="Cindy" />
         <p style={styles}> hello react! </p>
         <input type="text" defaultValue={name} />
@@ -47,34 +47,34 @@ function App() {
         <TernaryOperator />
       </Card>
       <Card>
-        <LogicalAnd></LogicalAnd>
+        <LogicalAnd />
       </Card>
       <Card>
-        <LogicalOr></LogicalOr>
+        <LogicalOr />
       </Card>
       <Card>
-        <MultipleConditions></MultipleConditions>
+        <MultipleConditions />
       </Card>
       <Card>
-        <SwitchStatement></SwitchStatement>
+        <SwitchStatement />
       </Card>
       <Card>
-        <BasicArrayMapping></BasicArrayMapping>
+        <BasicArrayMapping />
       </Card>
       <Card>
-        <FilterList></FilterList>
+        <FilterList />
       </Card>
       <Card>
-        <AddRemoveItems></AddRemoveItems>
+        <AddRemoveItems />
       </Card>
       <Card>
-        <MultipleInput></MultipleInput>
+        <MultipleInput />
       </Card>
       <Card>
-        <FormSubmission></FormSubmission>
+        <FormSubmission />
       </Card>
       <Card>
-        <RadioAndCheckButton></RadioAndCheckButton>
+        <RadioAndCheckButton />
       </Card>
     </>
   );
