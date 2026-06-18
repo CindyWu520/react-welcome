@@ -1,23 +1,24 @@
 # React
 
-## what is React
+## 1. what is React
 
 Library, not framework (unlike Angular is a Framework). Developed by facebook.
 It's SPA (Single page application). Made from reusable components. </br>
 
 Benefit:
+
 - component: has logic and UI
 - statement
 - vitual DOM (document object modle, HTML), more fast, only update the change part instead of whole page
 - easy to mantain
 - flexible
 
-## set up
+## 2. set up
 
 npm create vite@latest --react --javaScript
 npm run dev
 
-## JSX
+## 3. JSX
 
 ### JSX dynamic expression
 
@@ -26,52 +27,91 @@ npm run dev
 - ternaryOperator
 - list
 
-## Components
-### props
+## 4. Components
+
+### 4.1 props
+
 Parent component can pass props to children component.
 Simple and eazy to understand.
 
-### 回调函数
-父组件传函数给子组件，子组件通过调用函数把数据回传给父组件 eg.childToParent.jsx
-
 ### lifeCycle
+
 - mounting: add to dom
-- updating: change of state/props, update UI. !important
+- updating: change of state/props, update UI ⭐
 - unmounting: remove from dom
 
-## Hooks
-Introduced from React 16.8. 
+## 5. Hooks
+
+Introduced from React 16.8.
 允许在函数组件中使用状态和生命周期，替代了类组件中（state，lifecycle）中复杂的状态管理和生命周期
 
-### useState
+### 5.1 useState
+
 状态钩子，适用于组件需要修改状态
 比如：输入框内容，计数器
 
-### useEffect
+### 5.2 useEffect
+
 副作用钩子，control lifeCycle of component </br>
-useEffect接受两个参数：回调参数，依赖数组（决定when to execute useEffect）</br>
+useEffect接受两个参数：回调参数 (logic of side effect)，依赖数组（dependencies, 决定when to execute useEffect）</br>
 use senario:
-- like send reuqest get data from database
+
+- send reuqest get data from database ⭐
 - add event listener
 - setTimeout or setInterval
 - clear event listener, clear timeout
 
-#### 依赖数组
+#### 5.2.1 依赖数组 (dependency)
+
 - 无依赖: 每次组件渲染后都会执行
-- 空数组 (empty array): only executed when mounted (only once); used in send request to server 
+- 空数组[ ] (empty array): only executed when mounted (only once); used in send request to backend server
 - 有依赖项: event listener
 - 清理副作用
 
-### useContext
-access share data in react context. avoid prop drilling, 
+### 5.3 useContext
+
+access share data in react context. avoid prop drilling,
+
 - theme
 - user information
 - language
 
+## 6. 条件渲染 conditional rendering
+
+### 6.1 how to do conditional rendering
+
+- if syntax
+- 三元运算符 ternary operator
+- 逻辑和运算符 logical and or
+- switch
+
+### 6.2 map rendering
+
+- iterator elements for list
+- key used for identify each element inside the list, should be unique. 优化渲染性能，可以直接更新和移除对应元素
+- don't forget "return" keyword
+
+## 6.3 受控组件 form input
+
+## 7. 回调函数
+
+父组件传函数给子组件，子组件通过调用函数把数据回传给父组件</br>
+
+- react中，子组件不能直接改变父组件
+- 子组件通过调用父组件传递的回调函数，将数据传递给父组件
+- 父组件通过props传递给子组件，子组件在合适的时间调用它
+
+## 8. custome hook
+
+重复利用代码，custome hook
+
+- must start with "use" like "useForm"
+
 ## questions
+
 - devDependencies vs denpendencies
 - onclick={changeNameOnClick} instead of {changeNameOnClick()}
-
+- 怎么确保代码的可维护性？ create custome hook
 
 ![useState](./docs/useState.png)
 ![state-update-rules](./docs/state-update-rules.png)

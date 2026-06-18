@@ -54,12 +54,13 @@ export const FormSubmission = () => {
           onChange={handleInputValue}
         />
         <br />
-        <button
+        {/* <button
           type="submit"
           style={{ backgroundColor: "white", color: "black" }}
         >
           Submit
-        </button>
+        </button> */}
+        <input type="submit" value="submit" />
         <br />
         {message}
       </form>

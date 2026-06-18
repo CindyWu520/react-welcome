@@ -1,23 +1,6 @@
-import { useState } from "react";
-interface FormDate {
-  firstName: string;
-  lastName: string;
-  email: string;
-}
+import useForm from "../../hooks/useForm";
 export const MultipleInput = () => {
-  const [formData, setFormData] = useState<FormDate>({
-    firstName: "",
-    lastName: "",
-    email: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prv) => ({
-      ...prv,
-      [name]: value,
-    }));
-  };
+  const {formData, handleChange} = useForm();
 
   return (
     <div>
