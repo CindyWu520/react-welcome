@@ -105,13 +105,74 @@ access share data in react context. avoid prop drilling,
 
 重复利用代码，custome hook
 
-- must start with "use" like "useForm"
+- must start with `use` like `useForm.ts`
+- it's javaScript function, not react
+
+## 9. TailwindCss
+
+### 9.1 Install
+```bash
+npm install tailwindcss @tailwindcss/vite 
+```
+Then, add Tailwind Css to `vite.config.ts`</br>
+Last add `@import "tailwindcss";` to `index.css`</br>
+Also add extension for auto complelete: `Tailwind CSS IntelliSense`
+
+### 9.2 how to apply
+Keyword: `className`
+
+### 9.3 common usage
+边框：border border-blue-500 focus:ring focus:ring-blue-200 outline-none
+
+## 10. Router
+### 10.1 局部渲染
+不同于传统方式，刷新整个页面，react是SPA(Single page application)，局部渲染。
+只更新部分components，不会刷新整个页面
+- 不会刷新全页面
+- 只渲染相关组件
+- 保持应用状态：全局状态下，已加载的资源会保持不变
+
+### 10.2 Install
+```bash
+npm install react-router-dom
+````
+- add `<BrowserRouter>` to `main.tsx`
+- define `<Routes>`, `<Route>` in `App.tsx`
+
+### 10.3 code example
+- 用`<Link to="/about">`tag instead of `<a href="/about">`
+- `import {Routes, Route} from 'react-router-dom'`
+- 可以在路径中定义参数，并在组件中访问这些参数
+``` bash
+<Route path="/user/:id" component={User} />
+
+const User = () => {
+  const {id} = useParams(); // deconstructor id
+}
+```
+- redirect 重定向于导航
+``` bash
+<Redirect to="/new-path">
+```
+
+## 11. Connect with API
+### 11.1 Fetch
+```bash
+const response = await fetch(url);
+```
+### 11.2 axios
+```bash
+npm install axios
+```
+
+
 
 ## questions
 
 - devDependencies vs denpendencies
 - onclick={changeNameOnClick} instead of {changeNameOnClick()}
 - 怎么确保代码的可维护性？ create custome hook
+- how to apply tailwind
 
 ![useState](./docs/useState.png)
 ![state-update-rules](./docs/state-update-rules.png)
