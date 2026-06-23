@@ -18,7 +18,7 @@ import { SingleInput } from "../components/formInput/SingleInput";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const HomePage = () => {
+export const HomePage: React.FC = () => {
   const [name, setName] = useState("cindy");
   const items = [1, 2, 3];
 
@@ -28,7 +28,7 @@ export const HomePage = () => {
   };
 
   // 回调函数：接受子组件传递数据
-  const hanldeSingleNameChange = (newName: string) => {
+  const hanldeSingleNameChange = (newName: string) : void => {
     setName(newName);
   };
 

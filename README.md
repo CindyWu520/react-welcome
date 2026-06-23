@@ -193,6 +193,27 @@ npm install axios
 - reduce bug and improve the quality
 - better for teamwork
 
+### 12.1 Interface
+- 接口合并: 不同的interface可以有同一个名称，共同构成interface
+- extends interface
+
+### 12.2 Type
+- similar to interface
+- `&`交叉类型操作符：扩展
+- `|`联合类型操作符：多个形态
+``` bash
+// define the App as functional interface
+const App : React.FC = () => {}
+```
+
+### 12.3 where to define the types
+- can define at the same class (specific for one class)
+- can define under the folder of `types` (when multiple class use the same type)
+
+## 13. Generics
+- type PlaceHolder
+- 允许定义可重复，灵活且类型安全的函数/接口/类
+
 ## questions
 
 - devDependencies vs denpendencies
